@@ -1,3 +1,4 @@
 Library/
 Packages/
 *.sln
+Assembly-CSharp.csproj
