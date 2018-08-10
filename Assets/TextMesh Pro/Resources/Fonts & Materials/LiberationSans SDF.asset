@@ -4,11 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 1
-<<<<<<< HEAD
-  m_CorrespondingSourceObject: {fileID: 0}
-=======
   m_PrefabParentObject: {fileID: 0}
->>>>>>> 77cb7aeecdd3d03e14eb7e61d0cae0da027364b2
   m_PrefabInternal: {fileID: 0}
   m_Name: LiberationSans SDF Material
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
@@ -152,11 +148,7 @@ Material:
 --- !u!28 &2846298
 Texture2D:
   m_ObjectHideFlags: 1
-<<<<<<< HEAD
-  m_CorrespondingSourceObject: {fileID: 0}
-=======
   m_PrefabParentObject: {fileID: 0}
->>>>>>> 77cb7aeecdd3d03e14eb7e61d0cae0da027364b2
   m_PrefabInternal: {fileID: 0}
   m_Name: LiberationSans SDF Atlas
   m_ImageContentsHash:
@@ -171,11 +163,6 @@ Texture2D:
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 0
-<<<<<<< HEAD
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-=======
->>>>>>> 77cb7aeecdd3d03e14eb7e61d0cae0da027364b2
   m_AlphaIsTransparency: 0
   m_ImageCount: 1
   m_TextureDimension: 2
@@ -198,11 +185,7 @@ Texture2D:
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD
-  m_CorrespondingSourceObject: {fileID: 0}
-=======
   m_PrefabParentObject: {fileID: 0}
->>>>>>> 77cb7aeecdd3d03e14eb7e61d0cae0da027364b2
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
