@@ -2,3 +2,11 @@ Library/
 Packages/
 *.sln
 Assembly-CSharp.csproj
+<<<<<<< HEAD
+obj/
+.vs/
+=======
+Assembly-CSharp-Editor.csproj
+.vs/
+obj/
+>>>>>>> 28852ed0e0a59c68680cbd00b671c39b7f9d07e7
