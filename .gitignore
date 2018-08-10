@@ -2,3 +2,6 @@ Library/
 Packages/
 *.sln
 Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+.vs/
+obj/
