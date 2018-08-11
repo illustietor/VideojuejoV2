@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mini_Saltar : MonoBehaviour
 {
     public Rigidbody myRigidbody;
-    Vector3 aire = new Vector3(0f, 0f, 0f);
+    Vector3 aire = new Vector3(-7f, 0.765f, 0f);
 
     public void Saltar()
     {
