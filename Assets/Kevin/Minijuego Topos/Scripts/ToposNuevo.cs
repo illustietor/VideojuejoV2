@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ToposNuevo : MonoBehaviour {
@@ -17,7 +18,6 @@ public class ToposNuevo : MonoBehaviour {
     public Sprite topoFuera, topoGolpeado, topoEscondido;
 
     public int puntuacion;
-    public int numeroPartidas;
 
     public float tiempoMinimoAparecer, tiempoMaximoAparecer;
     public float tiempoMinimoDesaparecer , tiempoMaximoDesaparecer;
@@ -60,14 +60,17 @@ public class ToposNuevo : MonoBehaviour {
             topo[1].sprite = topoGolpeado;
             topo[2].sprite = topoGolpeado;
             topo[3].sprite = topoGolpeado;
-
-            RestartJuego();
         }
     }
 
     public void RestartJuego()
     {
-        StartCoroutine(EsperarVolverIniciarJuego());
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+            Time.timeScale = 1;
+        }
     }
 
 
@@ -133,21 +136,9 @@ public class ToposNuevo : MonoBehaviour {
                 tiempoActual[i] = 0;
             }
         }
-        FinalJuego();
-    }
 
-    IEnumerator EsperarVolverIniciarJuego()
-    {
-        Debug.Log("La corutine se ejecuta");
-        yield return new WaitForSecondsRealtime(3f);
-        Debug.Log("Esto deberia funcionar");
-        puntuacion = 0;
-        tiempoTotal = 0;
-        for (int i = 0; i < tiempoActual.Length; i++)
-        {
-            tiempoActual[i] = 0;
-        }
-        Time.timeScale = 1;
+        FinalJuego();
+        RestartJuego();
     }
 
     //IEnumerator AparecerYDesaparecerTopo(Image topo)
