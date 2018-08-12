@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kevin/Minijuego Adivinar/Scenes/Mini_Adivinar.unity
     guid: 882aabce11244f54d9509541a35842f6
+  - enabled: 1
+    path: Assets/Kevin/Minijuego PulsarMuchasVeces/Scenes/Tutorial.unity
+    guid: 13d85c510f241374a820bfed653490de
+  - enabled: 1
+    path: Assets/Kevin/Minijuego PulsarMuchasVeces/Scenes/Juego.unity
+    guid: 4bfc8e1946003fe4c9e7807afed0fba1
   m_configObjects: {}

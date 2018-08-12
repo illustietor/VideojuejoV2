@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Cubo : MonoBehaviour
 {
+    public Rigidbody myRigidbody;
     public void Obstaculos()
     {
         {
-            Rigidbody myRigidbody = GetComponent<Rigidbody>();
-        
+            myRigidbody = GetComponent<Rigidbody>();
             myRigidbody.AddForce(Vector3.left * 5, ForceMode.VelocityChange);
         }
     }
@@ -16,6 +16,11 @@ public class Cubo : MonoBehaviour
     void Start()
     {
         Obstaculos();
+    }
+
+    private void Update()
+    {
+
     }
 
     void OnTriggerEnter(Collider other)
