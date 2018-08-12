@@ -482,6 +482,7 @@ MonoBehaviour:
   manoAtaque: {fileID: 21300000, guid: 61d738dc700c7e84493c7afcd5e7206e, type: 3}
   manoEsquive: {fileID: 21300000, guid: 766000722fef8f542bdc4e0b515e6fba, type: 3}
   manoReposo: {fileID: 21300000, guid: cb4ae5ba2608fbe48ab9e371cb585752, type: 3}
+  bot: 0
 --- !u!114 &1566174450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,10 +675,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8c628bb8bc21a4da14b251a8a6771c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manos: []
-  manoAtaque: {fileID: 0}
-  manoEsquive: {fileID: 0}
-  manoReposo: {fileID: 0}
+  manos:
+  - {fileID: 802777001}
+  - {fileID: 1730592987}
+  manoAtaque: {fileID: 21300000, guid: 61d738dc700c7e84493c7afcd5e7206e, type: 3}
+  manoEsquive: {fileID: 21300000, guid: 766000722fef8f542bdc4e0b515e6fba, type: 3}
+  manoReposo: {fileID: 21300000, guid: cb4ae5ba2608fbe48ab9e371cb585752, type: 3}
+  bot: 0
 --- !u!4 &2095944415
 Transform:
   m_ObjectHideFlags: 0

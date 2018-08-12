@@ -10,7 +10,7 @@ public class ReventarSpace : MonoBehaviour {
     public int pulsacionesPorSegundo;
     public int pulsBot;
 
-    public bool facil, medio, dificil;
+    public bool facil = false, medio = false, dificil = false;
 
     int facil1, medio2, dificil3;
 
@@ -18,10 +18,6 @@ public class ReventarSpace : MonoBehaviour {
     {
         StartCoroutine(EmpezarJuego());
         Time.timeScale = 1;
-
-        facil1 = PlayerPrefs.GetInt("facil1", 1);
-        medio2 = PlayerPrefs.GetInt("medio2", 2);
-        dificil3 = PlayerPrefs.GetInt("dificl3", 3);
 
         CompararIf();
     }
@@ -38,17 +34,17 @@ public class ReventarSpace : MonoBehaviour {
 
     void CompararIf()
     {
-        if (facil1 == 1)
+        if (PlayerPrefs.HasKey("facil1"))
         {
             facil = true;
         }
 
-        else if (medio2 == 2)
+        else if (PlayerPrefs.HasKey("medio2"))
         {
             medio = true;
         }
 
-        else if (dificil3 == 1)
+        else if (PlayerPrefs.HasKey("dificil3"))
         {
             dificil = true;
         }
@@ -101,12 +97,14 @@ public class ReventarSpace : MonoBehaviour {
         {
             Debug.Log("Has ganado");
             //Sprite del player ganador
+            Time.timeScale = 0;
         }
 
         else if(pulsacionesPorSegundo - pulsBot <= -20)
         {
             Debug.Log("Has perdido");
             //Sprite del Bot ganador
+            Time.timeScale = 0; 
         }
     }
 
