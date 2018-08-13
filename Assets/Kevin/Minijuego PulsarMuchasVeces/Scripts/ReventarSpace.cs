@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReventarSpace : MonoBehaviour {
+    public Image pulso;
+    public Sprite ganaBot, bot, empate, player, ganaPlayer;
+
     public float tiempoBot;
 
     public int pulsacionesPorSegundo;
@@ -18,6 +21,7 @@ public class ReventarSpace : MonoBehaviour {
     {
         StartCoroutine(EmpezarJuego());
         Time.timeScale = 1;
+        pulso.sprite = empate;
 
         CompararIf();
     }
@@ -97,6 +101,7 @@ public class ReventarSpace : MonoBehaviour {
         {
             Debug.Log("Has ganado");
             //Sprite del player ganador
+            pulso.sprite = ganaPlayer;
             Time.timeScale = 0;
         }
 
@@ -104,6 +109,7 @@ public class ReventarSpace : MonoBehaviour {
         {
             Debug.Log("Has perdido");
             //Sprite del Bot ganador
+            pulso.sprite = ganaBot;
             Time.timeScale = 0; 
         }
     }
@@ -113,18 +119,21 @@ public class ReventarSpace : MonoBehaviour {
         if (pulsacionesPorSegundo - pulsBot >= -5 && pulsacionesPorSegundo - pulsBot <= 5)
         {
             //Sprite del pulso en medio
+            pulso.sprite = empate;
             Debug.Log("Pulso en medio");
         }
 
-        if (pulsacionesPorSegundo - pulsBot >= 5 && pulsacionesPorSegundo - pulsBot <= 19)
+        else if (pulsacionesPorSegundo - pulsBot >= 5 && pulsacionesPorSegundo - pulsBot <= 19)
         {
             //Sprite del Player ganando
+            pulso.sprite = player;
             Debug.Log("Va ganando el Player");
         }
 
-        if (pulsacionesPorSegundo - pulsBot >= -5 && pulsacionesPorSegundo - pulsBot <= -19)
+        else if (pulsacionesPorSegundo - pulsBot >= -5 && pulsacionesPorSegundo - pulsBot <= -19)
         {
             //Sprite del Bot ganando
+            pulso.sprite = bot;
             Debug.Log("Va ganando el Bot");
         }
     }
