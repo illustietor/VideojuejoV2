@@ -17,8 +17,12 @@ MonoBehaviour:
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y
+<<<<<<< HEAD
   m_String_keys:
   - pbCurrentMaterialPalette
+=======
+  m_String_keys: []
+>>>>>>> 0242ab6577bafe85e0e3595ce5a7352187d84e33
   m_Color_keys: []
   m_Material_keys: []
   m_Bool_values: 
@@ -26,7 +30,11 @@ MonoBehaviour:
   m_Float_values:
   - 0
   - 0
+<<<<<<< HEAD
   m_String_values:
   - Assets/Ivan/ProBuilder Data/Default Material Palette.asset
+=======
+  m_String_values: []
+>>>>>>> 0242ab6577bafe85e0e3595ce5a7352187d84e33
   m_Color_values: []
   m_Material_values: []
