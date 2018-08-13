@@ -33,6 +33,8 @@ public class Tutorial : MonoBehaviour {
                 if (medio == true)
                 {
                     PlayerPrefs.SetInt("medio2", 2);
+                    facil = false;
+                    PlayerPrefs.DeleteKey("facil1");
                 }
             }
 
@@ -42,6 +44,10 @@ public class Tutorial : MonoBehaviour {
                 if (dificil == true)
                 {
                     PlayerPrefs.SetInt("dificil3", 3);
+                    medio = false;
+                    facil = false;
+                    PlayerPrefs.DeleteKey("facil1");
+                    PlayerPrefs.DeleteKey("medio2");
                 }
             }
         }
