@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 public class Player : MonoBehaviour {
+    public Flowchart flowchart;
     GameObject triggeringNpc;
     bool triggering;
     bool keyPressed = false;
 
     public GameObject npcText;
-    public GameObject text;
-    public  BoxCollider colision;
+    public BoxCollider colision;
 
     void Update()
     {
@@ -22,19 +23,17 @@ public class Player : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.E) && keyPressed == false)
             {
                 keyPressed = true;
-                text.SetActive(true);
+                flowchart.gameObject.SetActive(true);
             }
 
             else if (Input.GetKeyDown(KeyCode.E) && keyPressed == true)
             {
                 keyPressed = false;
-                text.SetActive(false);
             }
         }
         else
         {
             npcText.SetActive(false);
-            text.SetActive(false);
         }
     }
 
